@@ -11,37 +11,42 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
+<div class="container">
+  <div class="form">
+    <div class="input-box">
+      <%= form.label :name, style: "display: block, align-items: center" %>
+      <%= form.text_field :name, placeholder: "Enter full name"%>
+    </div>
 
-  <div>
-    <%= form.label :x, style: "display: block" %>
-    <%= form.text_field :x %>
-  </div>
+    <div class="input-box">
+      <%= form.label :x, style: "display: block, align-items: center" %>
+      <%= form.text_field :x, placeholder: "https://twitter.com/"%>
+    </div>
 
-  <div>
-    <%= form.label :instagram, style: "display: block" %>
-    <%= form.text_field :instagram %>
-  </div>
+    <div class="input-box">
+      <%= form.label :instagram, style: "display: block, align-items: center" %>
+      <%= form.text_field :instagram, placeholder: "https://instagram.com/"%>
+    </div>
 
-  <div>
-    <%= form.label :youtube, style: "display: block" %>
-    <%= form.text_field :youtube %>
-  </div>
+    <div class="input-box">
+      <%= form.label :youtube, style: "display: block, align-items: center" %>
+      <%= form.text_field :youtube, placeholder: "https://youtube.com/"%>
+    </div>
 
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.number_field :user_id %>
-  </div>
+    <div class="input-box">
+      <%= form.label :user_id, style: "display: block, align-items: center" %>
+      <%= form.number_field :user_id, :presence => true%>
+    </div>
 
-  <div>
-    <%= form.label :style, style: "display: block" %>
-    <%= form.text_field :style %>
-  </div>
+    <div class="input-box">
+      <%= form.label :style, style: "display: block, align-items: center" %>
+      <%= form.text_field :style, placeholder: "Enter style"%>
+    </div>
 
-  <div>
-    <%= form.submit %>
+    <div class="button-wrapper", style="text-align: center;">
+      <%= form.submit class: "new-button" %>
+    </div>
   </div>
+</div>
+
 <% end %>

@@ -1,9 +1,13 @@
-<h1>New tree</h1>
+<div class="container">
+  <div class="content-wrapper">
+    <header class="text-center">New tree</header>
+  </div>
 
-<%= render "form", tree: @tree %>
+  <%= render "form", tree: @tree %>
 
-<br>
+  <br>
 
-<div>
-  <%= link_to "Back to trees", trees_path %>
+  <div class="button-wrapper", style= "text-align: right;">
+    <%= link_to "Back to trees", trees_path, method: :get, class: "cancel-button" %>
+  </div>
 </div>
