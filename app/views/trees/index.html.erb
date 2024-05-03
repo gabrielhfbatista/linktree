@@ -1,14 +1,16 @@
-<p style="color: green"><%= notice %></p>
+<div class="container">
+  <div class="content-wrapper">
+    <p style="color: green"><%= notice %></p>
+    <header class="text-center">Tree List</header>
+  </div>
 
-<h1>Trees</h1>
-
-<div id="trees">
-  <% @trees.each do |tree| %>
-    <%= render tree %>
-    <p>
-      <%= link_to "Show this tree", tree %>
-    </p>
-  <% end %>
+  <div id="trees">
+    <% @trees.each do |tree| %>
+      <%= render tree %>
+      <p class="button-wrapper-list">
+        <%= link_to "New tree", new_tree_path, class: "confirm-button" %>
+        <%= link_to "Show this tree", tree, class: "list-button" %>
+      </p>
+    <% end %>
+  </div>
 </div>
-
-<%= link_to "New tree", new_tree_path %>

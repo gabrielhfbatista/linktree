@@ -6,7 +6,7 @@
 
   <%= render @tree %>
 
-  <div class="button-wrapper", style="text-align: right;">
+  <div class="button-wrapper-list", style="text-align: right;">
     <%= link_to "Edit this tree", edit_tree_path(@tree), class: "cancel-button" %>
     <%= link_to "Back to trees", trees_path, class: "list-button" %>
     <%= button_to "Destroy this tree", @tree, method: :delete, class: "delete-button" %>

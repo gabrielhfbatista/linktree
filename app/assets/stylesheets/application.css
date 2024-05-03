@@ -89,6 +89,14 @@
   .button-wrapper {
     margin-top: 20px;
   }
+
+  .button-wrapper-list {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 10px;
+  }
   
   .confirm-button {
     background-color: #44cb44; 
