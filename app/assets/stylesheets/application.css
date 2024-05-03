@@ -135,6 +135,19 @@
     cursor: pointer;
   }
 
+  .edit-button {
+    background-color: #4c6dcb;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
   .list-button {
     background-color: #e9b658; 
     color: #fff;
