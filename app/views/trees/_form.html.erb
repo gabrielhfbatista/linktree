@@ -11,39 +11,39 @@
     </div>
   <% end %>
 
-<div class="container">
+<div>
   <div class="form">
-    <div class="input-box">
+    <div>
       <%= form.label :name, style: "display: block, align-items: center" %>
       <%= form.text_field :name, placeholder: "Enter full name"%>
     </div>
 
-    <div class="input-box">
+    <div>
       <%= form.label :x, style: "display: block, align-items: center" %>
       <%= form.text_field :x, placeholder: "https://twitter.com/"%>
     </div>
 
-    <div class="input-box">
+    <div>
       <%= form.label :instagram, style: "display: block, align-items: center" %>
       <%= form.text_field :instagram, placeholder: "https://instagram.com/"%>
     </div>
 
-    <div class="input-box">
+    <div>
       <%= form.label :youtube, style: "display: block, align-items: center" %>
       <%= form.text_field :youtube, placeholder: "https://youtube.com/"%>
     </div>
 
-    <div class="input-box">
+    <div>
       <%= form.label :user_id, style: "display: block, align-items: center" %>
       <%= form.number_field :user_id, :presence => true%>
     </div>
 
-    <div class="input-box">
+    <div>
       <%= form.label :style, style: "display: block, align-items: center" %>
       <%= form.text_field :style, placeholder: "Enter style"%>
     </div>
 
-    <div class="button-wrapper", style="text-align: center;">
+    <div>
       <%= form.submit class: "new-button" %>
     </div>
   </div>

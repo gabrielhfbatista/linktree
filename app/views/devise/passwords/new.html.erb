@@ -1,12 +1,12 @@
 <div class="container">
-   <div class="content-wrapper">
-    <header class="text-center">Forgot your password?</header>
+   <div>
+    <header>Forgot your password?</header>
   </div>
 
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
 
-    <div class="input-bot">
+    <div>
       <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
     </div>
@@ -16,7 +16,7 @@
     </div>
   <% end %>
 
-  <div class="button-wrapper", style="text-align: right;">
+  <div>
     <%= render "devise/shared/links" %>
   </div>
 </div>

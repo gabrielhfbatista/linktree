@@ -1,197 +1,91 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
- @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
- *{
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
- }
 
- body{
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  background: rgb(27, 12, 98);
- }
-
- @media screen and (max-width: 500px){
-    .form{
-      flex-wrap: wrap;
-    }
- }
-
-  .container {
-    position: relative;
-    max-width: 700px;
-    width: 100%;
-    background: #fff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+:root {
+    --grey: #BAC1B8;
+    --blue: #12a16a;
+    --green: #0C7C59;
+    --dark: #2B303A;
+    --orange: #D64933;
   }
 
-  .container header{
-    font-size: 1.5rem;
-    color: #333;
-    font-weight: 500;
-    text-align: center;
+  body
+  {
+    font-family: 'poppins'; 
+    margin: 0px;
   }
+ /* CSS */
+.button-1 {
 
-  .container .form{
-   margin-top: 5px;
-   margin-bottom: 5px;
-  }
-  
-  .content-wrapper {
-    text-align: center;
-  }
+  font-family:'Poppins', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
 
-  .form .input-box{
-    width: 100%;
-    margin-top: 20px;
-  }
+.button-1:hover {
+  background-color: #fff;
+}
 
-  .input-box label{
-    color: #333;
-  }
+.button-1:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
 
-  .form .input-box input{
-    position: relative;
-    height: 50px;
-    width: 100%;
-    outline: none;
-    font-size: 1rem;
-    color: #707070;
-    margin-top: 8px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 0 15px;
+@media (min-width: 768px) {
+  .button-1 {
+    min-width: 120px;
+    padding: 0 25px;
   }
-  
-  .button-wrapper {
-    margin-top: 20px;
-  }
+}
 
-  .button-wrapper-list {
-    margin-top: 20px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  
-  .confirm-button {
-    background-color: #44cb44; 
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 15px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+.button-1 {
 
-  .new-button {
-    background-color: #357194; 
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 15px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+  font-family:'Poppins', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
 
-  .cancel-button {
-    background-color: #959595; 
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    text-decoration: none;
-    margin-bottom: 15px;
-    display: inline-block;
-    font-size: 15px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+.button-1:hover {
+  background-color: #fff;
+}
 
-  .edit-button {
-    background-color: #4c6dcb;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    text-decoration: none;
-    margin-bottom: 15px;
-    display: inline-block;
-    font-size: 15px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+.button-1:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
 
-  .list-button {
-    background-color: #e9b658; 
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    text-decoration: none;
-    margin-bottom: 15px;
-    display: inline-block;
-    font-size: 15px;
-    border-radius: 4px;
-    cursor: pointer;
+@media (min-width: 768px) {
+  .button-1 {
+    min-width: 120px;
+    padding: 0 25px;
   }
-
-  .delete-button {
-    background-color: #be2f2f; 
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    text-decoration: none;
-    margin-bottom: 15px;
-    display: inline-block;
-    font-size: 15px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  .new-tree{
-    margin: 26px 30px 15px 30px;
-  }
-
-  input{
-    display: block;
-    width: 100%;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 0.25rem;
-    background-color: #fff;
-    color: #333;
-    transition: border-color 0.3s ease-in-out;
-  }
-  
-  input:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  }
+}
