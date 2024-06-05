@@ -1,18 +1,28 @@
-<div class="container">
-  <div class="content-wrapper">
-    <header class="text-center">Tree List</header>
-  </div>
-    <p style="color: green"><%= notice %></p>
+  <%= stylesheet_link_tag "trees" %>
+<p style="color: green"><%= notice %></p>
 
-  <div id="trees">
-    <% @trees.each do |tree| %>
-      <%= render tree %>
-      <p class="button-wrapper-list">
-        <%= link_to "Show this tree", tree, class: "list-button" %>
-      </p>
-    <% end %>
-      <div class="button-wrapper-list">
-        <%= link_to "New tree", new_tree_path, class: "confirm-button" %>
-      </div>  
-  </div>
+<div class="container">
+
+
+
+<% if user_signed_in?%>
+
+  <%# if current_user.tree.present? %>
+  
+ <%#= link_to "View my tree", current_user.tree, class: "button-1", target: "_blank" %>
+  <%# else %>
+
+  <%= link_to "Create your own Link Tree", new_tree_path, class: "button-1", target: "_blank" %>
+  <%# end %>
+
+
+
+
+
+
+<% else %>
+<%= link_to "Create your own Link Tree",  new_user_registration_path, class:"button-1", target: "_blank"%>
+
+<% end %>
+
 </div>

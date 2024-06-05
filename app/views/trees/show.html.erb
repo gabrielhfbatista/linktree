@@ -1,14 +1,17 @@
+<%= stylesheet_link_tag "trees" %>
+<p style="color: green"><%= notice %></p>
+
 <div class="container">
-  <div class="content-wrapper">
-    <header class="text-center">Tree</header>
-  </div>
-  <p style="color: green"><%= notice %></p>
+<%= render @tree %>
 
-  <%= render @tree %>
+<% if user_signed_in? %>
+<% if current_user.id == @tree.user_id %>
+<div style="margin-top: 20px;">
+  <%= link_to "Edit this tree", edit_tree_path(@tree), class:"button-1" %> 
+  <%#= link_to "Back to trees", trees_path %>
 
-  <div class="button-wrapper-list", style="text-align: right;">
-    <%= link_to "Edit this tree", edit_tree_path(@tree), class: "edit-button" %>
-    <%= link_to "Back to trees", trees_path, class: "list-button" %>
-    <%= button_to "Destroy this tree", @tree, method: :delete, class: "delete-button" %>
-  </div>
+  <%= button_to "Delete my tree", @tree, method: :delete, class:"button-1", style:"margin-top: 20px;" %>
+</div>
+<% end %>
+<% end %>
 </div>

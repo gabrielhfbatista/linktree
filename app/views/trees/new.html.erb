@@ -1,13 +1,10 @@
+<%= stylesheet_link_tag "trees" %>
 <div class="container">
-  <div class="content-wrapper">
-    <header class="text-center">New tree</header>
-  </div>
-
-  <%= render "form", tree: @tree %>
-
-  <br>
-
-  <div class="button-wrapper", style= "text-align: right;">
-    <%= link_to "Back to trees", trees_path, method: :get, class: "cancel-button" %>
-  </div>
+<%= render "form", tree: @tree %>
+<br>
+<!--
+<div>
+  <%= link_to "Back to trees", trees_path %>
+</div>
+--->
 </div>
